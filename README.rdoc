@@ -1,8 +1,12 @@
-= multitouch-inspector
+= Multitouch Inspector
 
 == Requirements
 
+Multitouch Inspector comes with a simple Sinatra based app to generate the applications manifest file on the fly. To run it you'll need Rake and Sinatra on your system.
+
 == Usage
+
+Simply run "rake" in the projects root directory and navigate to http://<you-ip-here>:9090/ on your iPad. 
 
 == Copyright
 
