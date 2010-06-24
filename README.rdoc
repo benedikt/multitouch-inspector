@@ -1,5 +1,11 @@
 = Multitouch Inspector
 
+== Demo
+
+Try it by pointing your iPad's Mobile Safari to http://blog.synatic.net/assets/2010/6/24/index.html
+
+== Screenshot
+
 http://blog.synatic.net/assets/2010/6/24/multitouch-inspector_medium.png
 
 == Requirements
@@ -8,7 +14,7 @@ Multitouch Inspector comes with a simple Sinatra based app to generate the appli
 
 == Usage
 
-Simply run "rake" in the projects root directory and navigate to http://your-ip-here:9090 on your iPad. 
+Simply run "rake" in the project's root directory and navigate to http://your-ip-here:9090 on your iPad. 
 
 == Copyright
 
