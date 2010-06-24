@@ -1,0 +1,232 @@
+body {
+	background: #1f1f1f url('../images/background.png');
+	color: #fff;
+	font-family: Helvetica;
+	margin: 0px;
+	padding: 0px;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+}
+
+#instructions {
+	width: 450px;
+	height: 50px;
+	margin: -25px -225px;
+	line-height: 50px;
+	-webkit-border-radius: 25px;
+	opacity: 0.5;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: #000;
+	text-align: center;
+	-webkit-transition: all 0.5s ease-out;
+}
+
+#instructions.hidden {
+	opacity: 0;
+}
+
+#tracking {
+	position: absolute;
+	overflow: hidden;
+	z-index: 0px;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	-webkit-animation-name: pulse;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+}
+
+#toolbar {
+	position: absolute;
+	z-index: 1000;
+	line-height: 42px;
+	height: 42px;
+	width: 100%;
+	padding: 0px;
+	-webkit-border-top-left-radius: 7px;
+	-webkit-border-top-right-radius: 7px;
+	border-top: solid 1px #444;
+	background: -webkit-gradient(linear, left top, left bottom, from(#111), to(#000), color-stop(0.5, #444), color-stop(0.5, #333));
+}
+
+#toolbar a.button {
+	color: #fff;
+	margin: 6px 0px 6px 6px;
+	line-height: 28px;
+	height: 28px;
+	padding: 0px 10px;
+	display: inline-block;
+	font-size: 14px;
+	text-decoration: none;
+	text-shadow: 0px -1px 0px #000;
+	-webkit-box-shadow: 0px 1px 0px #333, 0px -1px 0px #333;
+	border: solid 1px #111;
+	-webkit-border-radius: 3px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#222), to(#111), color-stop(0.5, #555), color-stop(0.5, #333));
+}
+
+#toolbar a.button:last-of-type {
+	margin: 6px;
+}
+
+#toolbar a.button.console {
+	float: right;
+}
+
+#toolbar a.button:active,
+#toolbar a.button.active {
+	background: -webkit-gradient(linear, left top, left bottom, from(#222), to(#111), color-stop(0.5, #333), color-stop(0.5, #111));
+}
+
+#toolbar span.title {
+	display: block;
+	color: #000;
+	width: 500px;
+	margin: 0px -250px;
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	text-shadow: 0px 1px 0px #333;
+	font-weight: bold;
+	text-align: center;
+}
+
+#console {
+	position: absolute;
+	z-index: 10;
+	left: 0px;
+	bottom: 0px;
+	-webkit-transition: all 0.5s ease-out;
+	background: #000;
+	width: 100%;
+	height: 0px;
+	opacity: 0.5;
+	font-family: monospace;
+	font-size: 12px;
+	overflow: scroll;
+}
+
+#console span {
+	display: block;
+}
+
+#console span.touchstart {
+	color: #95FFB3;
+}
+
+#console span.touchmove {
+	color: #4285FF;
+}
+
+#console span.touchend {
+	color: #FF9F69;
+}
+
+#stats {
+	position: absolute;
+	z-index: 10;
+	left: 0px;
+	bottom: 0px;
+	-webkit-transition: all 0.5s ease-out;
+}
+
+#stats div {
+	-webkit-border-radius: 3px;
+	color: #1f1f1f;
+	margin: 10px;
+	padding: 10px;
+	font-weight: bold;
+	float: left;
+	text-shadow: 0px 1px rgba(255, 255, 255, 0.3);
+}
+
+#stats div .value {
+	display: inline-block;
+	min-width: 20px;
+	text-align: right;
+}
+
+#stats #state .value {
+	min-width: 45px;
+}
+
+#stats div:nth-child(1n) {
+	background: #E8DB54;
+	-webkit-box-shadow: 0px 0px 10px #E8DB54;
+}
+
+#stats div:nth-child(2n) {
+	background: #DD54E8;
+	-webkit-box-shadow: 0px 0px 10px #DD54E8;
+}
+
+#stats div:nth-child(3n) {
+	background: #95FFB3;
+	-webkit-box-shadow: 0px 0px 10px #95FFB3;
+}
+
+#stats div:nth-child(4n) {
+	background: #4285FF;
+	-webkit-box-shadow: 0px 0px 10px #4285FF;
+}
+
+#stats div:nth-child(5n) {
+	background: #FF9F69;
+	-webkit-box-shadow: 0px 0px 10px #FF9F69;
+}
+
+.touch {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	font-size: 12px;
+	-webkit-border-radius: 50px;
+	margin-top: -40px;
+	margin-left: -40px;
+}
+
+.touch:nth-child(1n) {
+	border: solid 1px #E8DB54;
+	-webkit-box-shadow: 0px 0px 15px #E8DB54;
+}
+
+.touch:nth-child(2n) {
+	border: solid 1px #95FFB3;
+	-webkit-box-shadow: 0px 0px 15px #95FFB3;
+}
+
+.touch:nth-child(3n) {
+	border: solid 1px #FF9F69;
+	-webkit-box-shadow: 0px 0px 15px #FF9F69;
+}
+
+.touch:nth-child(4n) {
+	border: solid 1px #DD54E8;
+	-webkit-box-shadow: 0px 0px 15px #DD54E8;
+}
+
+.touch:nth-child(5n) {
+	border: solid 1px #4285FF;
+	-webkit-box-shadow: 0px 0px 15px #4285FF;
+}
+
+@-webkit-keyframes pulse {
+	
+	0% {
+		opacity: 1.0;
+	}
+	
+	50% {
+		opacity: 0.3;
+	}
+	
+	100% {
+		opacity: 1.0;
+	}
+
+}
