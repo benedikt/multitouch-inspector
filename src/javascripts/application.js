@@ -6,6 +6,10 @@ function $$(selector) {
 	return document.querySelector(selector);
 }
 
+function $$$(selector) {
+	return document.querySelectorAll(selector);
+}
+
 function updateStats(field, value) {
 	$$('#' + field + ' .value').innerHTML = value;
 }
@@ -103,12 +107,26 @@ window.onload = function() {
 
 	/* Toolbar Buttons */
 	
-	$('resetButton').addEventListener('touchend', function(event) {
+	var touchSupported = ('createTouch' in document);
+	
+	$('resetButton').addEventListener(touchSupported ? 'touchend' : 'click', function(event) {
 		window.location.reload();
 		event.preventDefault();
 	}, true);
+	
+	$('settingsButton').addEventListener(touchSupported ? 'touchend' : 'click', function(event) {
+		var s = $('settings'), b = $('settingsButton');
+		
+		if(b.className.match(/active/)) {
+			s.style.opacity = 0;
+			b.className = b.className.replace(/ active/, '')
+		} else {
+			s.style.opacity = 1;
+			b.className += ' active';
+		}
+	}, true);
 
-	$('consoleButton').addEventListener('touchend', function(event) {
+	$('consoleButton').addEventListener(touchSupported ? 'touchend' : 'click', function(event) {
 		var c = $('console'), b = $('consoleButton'), s = $('stats');
 		
 		if(b.className.match(/active/)) {
@@ -121,5 +139,26 @@ window.onload = function() {
 		
 		event.preventDefault();
 	}, true);
+
+
+	/* Settings */
 	
+	var toggleButtons = $$$('.toggleButton');
+	for(var i = 0; i < toggleButtons.length; i++) {
+		var toggleButton = toggleButtons[i];
+		toggleButton.addEventListener(touchSupported ? 'touchend' : 'click', function(element) {
+			return function(event) {
+				var body = document.documentElement;
+				if(element.className.match(/ on/)) {
+					element.className = element.className.replace(/ on/, '')
+					element.className += ' off';
+					body.className = body.className.replace(' ' + element.id, '')
+				} else {
+					element.className += ' on';
+					element.className = element.className.replace(/ off/, '')
+					body.className += ' ' + element.id
+				}
+			}
+		}(toggleButton), true);
+	}
 }

@@ -20,6 +20,7 @@
   <body>
     <div id="toolbar">
       <a href="#" class="button reset" id="resetButton">Reset</a>
+      <a href="#" class="button settings" id="settingsButton">Settings</a>
       <a href="#" class="button console" id="consoleButton">Console</a>
       <span class="title">Multitouch Inspector</span>
     </div>
@@ -30,6 +31,25 @@
       <div id="touchstarts">Starts: <span class="value">0</span></div>
       <div id="touchmoves">Moves: <span class="value">0</span></div>
       <div id="touchends">Ends: <span class="value">0</span></div>
+    </div>
+    <div id="settings">
+      <div class="arrow"></div>
+      <span class="title">Settings</span>
+      <div class="content">
+        <label for="settings_pulsate">Pulsate:</label>
+        <div class="toggleButton" id="settings_pulsate">
+          <span class="toggle"></span>
+          <span class="off">Off</span>
+          <span class="on">On</span>
+        </div>
+        
+        <label for="settings_stats">Statistics:</label>
+        <div class="toggleButton" id="settings_stats">
+          <span class="toggle"></span>
+          <span class="off">Off</span>
+          <span class="on">On</span>
+        </div>
+      </div>
     </div>
     <div id="console"></div>
   </body>
