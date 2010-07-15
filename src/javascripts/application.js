@@ -64,8 +64,6 @@ window.onload = function() {
 			if(!touches[touch.identifier]) {	
 				var element = document.createElement('div');
 				element.className = 'touch';
-				//element.style.left = touch.pageX + 'px';
-				//element.style.top = touch.pageY + 'px';
 				element.style.webkitTransform = 'translate(' + touch.pageX + 'px, ' + touch.pageY + 'px)';
 
 				tracking.appendChild(element);
