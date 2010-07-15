@@ -1,6 +1,6 @@
 body {
 	background: #1f1f1f url('../images/background.png');
-	color: #fff;
+	color: #000;
 	font-family: Helvetica;
 	margin: 0px;
 	padding: 0px;
@@ -134,7 +134,6 @@ body {
 
 #settings {
 	border-top: solid 1px #444;
-	display: block;
 	width: 300px;
 	background: #202020;
 	-webkit-box-shadow: 0px 0px 20px #000;
@@ -143,8 +142,6 @@ body {
 	top: 55px;
 	left: 40px;
 	z-index: 600;
-	opacity: 0;
-	-webkit-transition: all 0.2s ease-out;
 }
 
 #settings .arrow {

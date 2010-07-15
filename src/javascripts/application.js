@@ -64,8 +64,9 @@ window.onload = function() {
 			if(!touches[touch.identifier]) {	
 				var element = document.createElement('div');
 				element.className = 'touch';
-				element.style.left = touch.pageX + 'px';
-				element.style.top = touch.pageY + 'px';
+				//element.style.left = touch.pageX + 'px';
+				//element.style.top = touch.pageY + 'px';
+				element.style.webkitTransform = 'translate(' + touch.pageX + 'px, ' + touch.pageY + 'px)';
 
 				tracking.appendChild(element);
 				touches[touch.identifier] = element;
@@ -85,8 +86,7 @@ window.onload = function() {
 			var touch = event.changedTouches[i];
 			var element = touches[touch.identifier];
 		
-			element.style.left = touch.pageX + 'px';
-			element.style.top = touch.pageY + 'px';
+			element.style.webkitTransform = 'translate3d(' + touch.pageX + 'px, ' + touch.pageY + 'px, 0px)';
 		}
 	
 		event.preventDefault();
@@ -118,10 +118,10 @@ window.onload = function() {
 		var s = $('settings'), b = $('settingsButton');
 		
 		if(b.className.match(/active/)) {
-			s.style.opacity = 0;
+			s.style.display = 'none';
 			b.className = b.className.replace(/ active/, '')
 		} else {
-			s.style.opacity = 1;
+			s.style.display = 'block';
 			b.className += ' active';
 		}
 	}, true);
