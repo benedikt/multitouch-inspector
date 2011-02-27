@@ -14,7 +14,7 @@ Multitouch Inspector comes with a simple Sinatra based app to generate the appli
 
 == Usage
 
-Simply run "rake" in the project's root directory and navigate to http://your-ip-here:9090 on your iPad. 
+Simply run "rake" in the project's root directory and navigate to http://your-ip-here:9090 on your iPad.
 
 == Copyright
 

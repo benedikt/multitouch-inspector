@@ -3,7 +3,7 @@ require 'digest/sha2'
 require 'pathname'
 
 class ServerApp < Sinatra::Base
-  
+
     set :root, File.join(File.dirname(__FILE__), '..')
     set :public, 'src'
 
@@ -29,6 +29,6 @@ end
 
 task :default => :server
 
-task :server do 
+task :server do
   ServerApp.run! :port => 9090, :logging => true
 end

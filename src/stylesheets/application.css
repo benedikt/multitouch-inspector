@@ -1,380 +1,380 @@
 body {
-	background: #1f1f1f url('../images/background.png');
-	color: #000;
-	font-family: Helvetica;
-	margin: 0px;
-	padding: 0px;
-	-webkit-user-select: none;
-	-webkit-touch-callout: none;
+  background: #1f1f1f url('../images/background.png');
+  color: #000;
+  font-family: Helvetica;
+  margin: 0px;
+  padding: 0px;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 #instructions {
-	width: 450px;
-	height: 50px;
-	margin: -25px -225px;
-	line-height: 50px;
-	-webkit-border-radius: 25px;
-	opacity: 0.5;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	background: #000;
-	text-align: center;
-	-webkit-transition: all 0.5s ease-out;
+  width: 450px;
+  height: 50px;
+  margin: -25px -225px;
+  line-height: 50px;
+  -webkit-border-radius: 25px;
+  opacity: 0.5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #000;
+  text-align: center;
+  -webkit-transition: all 0.5s ease-out;
 }
 
 #instructions.hidden {
-	opacity: 0;
+  opacity: 0;
 }
 
 
 .settings_pulsate #tracking {
-	-webkit-animation-name: pulse;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
 }
 
 #tracking {
-	position: absolute;
-	overflow: hidden;
-	z-index: 0px;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 100%;
+  position: absolute;
+  overflow: hidden;
+  z-index: 0px;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
 }
 
 #toolbar {
-	position: absolute;
-	z-index: 500;
-	line-height: 42px;
-	height: 42px;
-	width: 100%;
-	padding: 0px;
-	-webkit-border-top-left-radius: 7px;
-	-webkit-border-top-right-radius: 7px;
-	border-top: solid 1px #444;
-	background: -webkit-gradient(linear, left top, left bottom, from(#111), to(#000), color-stop(0.5, #444), color-stop(0.5, #333));
+  position: absolute;
+  z-index: 500;
+  line-height: 42px;
+  height: 42px;
+  width: 100%;
+  padding: 0px;
+  -webkit-border-top-left-radius: 7px;
+  -webkit-border-top-right-radius: 7px;
+  border-top: solid 1px #444;
+  background: -webkit-gradient(linear, left top, left bottom, from(#111), to(#000), color-stop(0.5, #444), color-stop(0.5, #333));
 }
 
 #toolbar a.button {
-	color: #fff;
-	margin: 6px 0px 6px 6px;
-	line-height: 28px;
-	height: 28px;
-	padding: 0px 10px;
-	display: inline-block;
-	font-size: 14px;
-	text-decoration: none;
-	text-shadow: 0px -1px 0px #000;
-	-webkit-box-shadow: 0px 1px 0px #333, 0px -1px 0px #333;
-	border: solid 1px #111;
-	-webkit-border-radius: 3px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#222), to(#111), color-stop(0.5, #555), color-stop(0.5, #333));
+  color: #fff;
+  margin: 6px 0px 6px 6px;
+  line-height: 28px;
+  height: 28px;
+  padding: 0px 10px;
+  display: inline-block;
+  font-size: 14px;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #000;
+  -webkit-box-shadow: 0px 1px 0px #333, 0px -1px 0px #333;
+  border: solid 1px #111;
+  -webkit-border-radius: 3px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#222), to(#111), color-stop(0.5, #555), color-stop(0.5, #333));
 }
 
 #toolbar a.button:last-of-type {
-	margin: 6px;
+  margin: 6px;
 }
 
 #toolbar a.button.console {
-	float: right;
+  float: right;
 }
 
 #toolbar a.button:active,
 #toolbar a.button.active {
-	background: -webkit-gradient(linear, left top, left bottom, from(#222), to(#111), color-stop(0.5, #333), color-stop(0.5, #111));
+  background: -webkit-gradient(linear, left top, left bottom, from(#222), to(#111), color-stop(0.5, #333), color-stop(0.5, #111));
 }
 
 #toolbar span.title {
-	display: block;
-	color: #000;
-	width: 500px;
-	margin: 0px -250px;
-	position: absolute;
-	top: 0px;
-	left: 50%;
-	z-index: 1000;
-	text-shadow: 0px 1px 0px #333;
-	font-weight: bold;
-	text-align: center;
+  display: block;
+  color: #000;
+  width: 500px;
+  margin: 0px -250px;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  z-index: 1000;
+  text-shadow: 0px 1px 0px #333;
+  font-weight: bold;
+  text-align: center;
 }
 
 #console {
-	position: absolute;
-	z-index: 10;
-	left: 0px;
-	bottom: 0px;
-	-webkit-transition: all 0.5s ease-out;
-	background: #000;
-	width: 100%;
-	height: 0px;
-	opacity: 0.5;
-	font-family: monospace;
-	font-size: 12px;
-	overflow: hidden;
+  position: absolute;
+  z-index: 10;
+  left: 0px;
+  bottom: 0px;
+  -webkit-transition: all 0.5s ease-out;
+  background: #000;
+  width: 100%;
+  height: 0px;
+  opacity: 0.5;
+  font-family: monospace;
+  font-size: 12px;
+  overflow: hidden;
 }
 
 #console span {
-	display: block;
+  display: block;
 }
 
 #console span.touchstart {
-	color: #95FFB3;
+  color: #95FFB3;
 }
 
 #console span.touchmove {
-	color: #4285FF;
+  color: #4285FF;
 }
 
 #console span.touchend {
-	color: #FF9F69;
+  color: #FF9F69;
 }
 
 #settings {
-	border-top: solid 1px #444;
-	width: 300px;
-	background: #202020;
-	-webkit-box-shadow: 0px 0px 20px #000;
-	-webkit-border-radius: 10px;
-	position: absolute;
-	top: 55px;
-	left: 40px;
-	z-index: 600;
+  border-top: solid 1px #444;
+  width: 300px;
+  background: #202020;
+  -webkit-box-shadow: 0px 0px 20px #000;
+  -webkit-border-radius: 10px;
+  position: absolute;
+  top: 55px;
+  left: 40px;
+  z-index: 600;
 }
 
 #settings .arrow {
-	background: -webkit-gradient(linear, left top, right bottom, from(#111), to(#444), color-stop(0.5, #111), color-stop(0.5, #111));
-	position: absolute;
-	z-index: 650;
-	top: -14px;
-	left: 60px;
-	width: 26px;
-	height: 26px;
-	-webkit-transform: rotate(45deg);
-	border-left: solid 1px #444;
-	border-top: solid 1px #444;
-	border-bottom: 0px;
-	border-right: 0px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#111), to(#444), color-stop(0.5, #111), color-stop(0.5, #111));
+  position: absolute;
+  z-index: 650;
+  top: -14px;
+  left: 60px;
+  width: 26px;
+  height: 26px;
+  -webkit-transform: rotate(45deg);
+  border-left: solid 1px #444;
+  border-top: solid 1px #444;
+  border-bottom: 0px;
+  border-right: 0px;
 }
 
 #settings .title {
-	-webkit-border-top-left-radius: 10px;
-	-webkit-border-top-right-radius: 10px;
-	
-	
-	background: -webkit-gradient(linear, left top, left bottom, from(#111), to(#000), color-stop(0.5, #444), color-stop(0.5, #333));
-	display: block;
-	line-height: 35px;
-	height: 35px;
-	color: #000;
-	text-shadow: 0px 1px 0px #333;
-	font-weight: bold;
-	text-align: center;
-	position: relative;
-	top: 1px;
-	left: 0px;
-	z-index: 700;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#111), to(#000), color-stop(0.5, #444), color-stop(0.5, #333));
+  display: block;
+  line-height: 35px;
+  height: 35px;
+  color: #000;
+  text-shadow: 0px 1px 0px #333;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  top: 1px;
+  left: 0px;
+  z-index: 700;
 }
 
 #settings .content {
-	border-left: solid 5px #000;
-	border-right: solid 5px #000;
-	border-bottom: solid 5px #000;
-	padding: 10px;
-	
-	height: 80px;
-	
-	-webkit-border-bottom-left-radius: 10px;
-	-webkit-border-bottom-right-radius: 10px;
-	
-	color: #444;
-	text-shadow: 0px -1px #000;
+  border-left: solid 5px #000;
+  border-right: solid 5px #000;
+  border-bottom: solid 5px #000;
+  padding: 10px;
+
+  height: 80px;
+
+  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+
+  color: #444;
+  text-shadow: 0px -1px #000;
 }
 
 #settings label {
-	float: left;
-	clear: both;
-	font-weight: bold;
-	width: 100px;
-	text-align: right;
-	padding-right: 10px;
-	display: inline-block;
-	line-height: 30px;
-	margin: 5px 0px;
+  float: left;
+  clear: both;
+  font-weight: bold;
+  width: 100px;
+  text-align: right;
+  padding-right: 10px;
+  display: inline-block;
+  line-height: 30px;
+  margin: 5px 0px;
 }
 
 #settings .toggleButton {
-	margin: 5px 0px;
-	float: right;
-	-webkit-box-shadow: 0px 1px 0px #333, 0px -1px 0px #000;
-	border: solid 1px #111;
-	padding: 0px;
-	width: 80px;
-	height: 30px;
-	display: inline-block;
-	background: #111;
-	-webkit-border-radius: 3px;
-	-webkit-transition: all 0.2s ease-out;
-	position: relative;
+  margin: 5px 0px;
+  float: right;
+  -webkit-box-shadow: 0px 1px 0px #333, 0px -1px 0px #000;
+  border: solid 1px #111;
+  padding: 0px;
+  width: 80px;
+  height: 30px;
+  display: inline-block;
+  background: #111;
+  -webkit-border-radius: 3px;
+  -webkit-transition: all 0.2s ease-out;
+  position: relative;
 }
 
 #settings .toggleButton .toggle {
-	width: 40px;
-	height: 30px;
-	display: inline-block;
-	background: -webkit-gradient(linear, left top, left bottom, from(#222), to(#1F1F1F));
-	position: absolute;
-	top: 0px;
-	-webkit-box-shadow: 0px -1px 0px #333;
-	-webkit-border-radius: 2px;
-	-webkit-transition: all 0.2s ease-out;
-	z-index: 660;
+  width: 40px;
+  height: 30px;
+  display: inline-block;
+  background: -webkit-gradient(linear, left top, left bottom, from(#222), to(#1F1F1F));
+  position: absolute;
+  top: 0px;
+  -webkit-box-shadow: 0px -1px 0px #333;
+  -webkit-border-radius: 2px;
+  -webkit-transition: all 0.2s ease-out;
+  z-index: 660;
 }
 
 #settings .toggleButton .on,
 #settings .toggleButton .off {
-	color: #222;
-	text-shadow: 0px -1px #000;
-	display: inline-block;
-	position: absolute;
-	line-height: 30px;
-	height: 30px;
-	width: 40px;
-	text-align: center;
+  color: #222;
+  text-shadow: 0px -1px #000;
+  display: inline-block;
+  position: absolute;
+  line-height: 30px;
+  height: 30px;
+  width: 40px;
+  text-align: center;
 }
 
 #settings .toggleButton .on {
-	left: 0px;
-	color: #444;
+  left: 0px;
+  color: #444;
 }
 
 #settings .toggleButton .off {
-	right: 0px;
+  right: 0px;
 }
 
 #settings .toggleButton.off {
 }
 
 #settings .toggleButton.off .toggle {
-	left: 0px;
+  left: 0px;
 }
 
 #settings .toggleButton.on {
 }
 
 #settings .toggleButton.on .toggle {
-	left: 40px;
+  left: 40px;
 }
 
 
 
 .settings_stats #stats {
-	display: block;
+  display: block;
 }
 
 #stats {
-	display: none;
-	position: absolute;
-	z-index: 10;
-	left: 0px;
-	bottom: 0px;
-	-webkit-transition: all 0.5s ease-out;
+  display: none;
+  position: absolute;
+  z-index: 10;
+  left: 0px;
+  bottom: 0px;
+  -webkit-transition: all 0.5s ease-out;
 }
 
 #stats div {
-	-webkit-border-radius: 3px;
-	color: #1f1f1f;
-	margin: 10px;
-	padding: 10px;
-	font-weight: bold;
-	float: left;
-	text-shadow: 0px 1px rgba(255, 255, 255, 0.3);
+  -webkit-border-radius: 3px;
+  color: #1f1f1f;
+  margin: 10px;
+  padding: 10px;
+  font-weight: bold;
+  float: left;
+  text-shadow: 0px 1px rgba(255, 255, 255, 0.3);
 }
 
 #stats div .value {
-	display: inline-block;
-	min-width: 20px;
-	text-align: right;
+  display: inline-block;
+  min-width: 20px;
+  text-align: right;
 }
 
 #stats #state .value {
-	min-width: 45px;
+  min-width: 45px;
 }
 
 #stats div:nth-child(1n) {
-	background: #E8DB54;
-	-webkit-box-shadow: 0px 0px 10px #E8DB54;
+  background: #E8DB54;
+  -webkit-box-shadow: 0px 0px 10px #E8DB54;
 }
 
 #stats div:nth-child(2n) {
-	background: #DD54E8;
-	-webkit-box-shadow: 0px 0px 10px #DD54E8;
+  background: #DD54E8;
+  -webkit-box-shadow: 0px 0px 10px #DD54E8;
 }
 
 #stats div:nth-child(3n) {
-	background: #95FFB3;
-	-webkit-box-shadow: 0px 0px 10px #95FFB3;
+  background: #95FFB3;
+  -webkit-box-shadow: 0px 0px 10px #95FFB3;
 }
 
 #stats div:nth-child(4n) {
-	background: #4285FF;
-	-webkit-box-shadow: 0px 0px 10px #4285FF;
+  background: #4285FF;
+  -webkit-box-shadow: 0px 0px 10px #4285FF;
 }
 
 #stats div:nth-child(5n) {
-	background: #FF9F69;
-	-webkit-box-shadow: 0px 0px 10px #FF9F69;
+  background: #FF9F69;
+  -webkit-box-shadow: 0px 0px 10px #FF9F69;
 }
 
 .touch {
-	position: absolute;
-	width: 80px;
-	height: 80px;
-	font-size: 12px;
-	-webkit-border-radius: 50px;
-	margin-top: -40px;
-	margin-left: -40px;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  font-size: 12px;
+  -webkit-border-radius: 50px;
+  margin-top: -40px;
+  margin-left: -40px;
 }
 
 .touch:nth-child(1n) {
-	border: solid 1px #E8DB54;
-	-webkit-box-shadow: 0px 0px 15px #E8DB54;
+  border: solid 1px #E8DB54;
+  -webkit-box-shadow: 0px 0px 15px #E8DB54;
 }
 
 .touch:nth-child(2n) {
-	border: solid 1px #95FFB3;
-	-webkit-box-shadow: 0px 0px 15px #95FFB3;
+  border: solid 1px #95FFB3;
+  -webkit-box-shadow: 0px 0px 15px #95FFB3;
 }
 
 .touch:nth-child(3n) {
-	border: solid 1px #FF9F69;
-	-webkit-box-shadow: 0px 0px 15px #FF9F69;
+  border: solid 1px #FF9F69;
+  -webkit-box-shadow: 0px 0px 15px #FF9F69;
 }
 
 .touch:nth-child(4n) {
-	border: solid 1px #DD54E8;
-	-webkit-box-shadow: 0px 0px 15px #DD54E8;
+  border: solid 1px #DD54E8;
+  -webkit-box-shadow: 0px 0px 15px #DD54E8;
 }
 
 .touch:nth-child(5n) {
-	border: solid 1px #4285FF;
-	-webkit-box-shadow: 0px 0px 15px #4285FF;
+  border: solid 1px #4285FF;
+  -webkit-box-shadow: 0px 0px 15px #4285FF;
 }
 
 @-webkit-keyframes pulse {
-	
-	0% {
-		opacity: 1.0;
-	}
-	
-	50% {
-		opacity: 0.3;
-	}
-	
-	100% {
-		opacity: 1.0;
-	}
+
+  0% {
+    opacity: 1.0;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1.0;
+  }
 
 }
